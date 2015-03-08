@@ -1,5 +1,6 @@
 Program Name: 	Random Password Generator
 Author: 	James Konderla
+Company:	Dingbat IT Services, LLC
 First Created: 	December 31st, 2014
 Dependancies:	Microsoft .Net Framework 4.0 (minimum)
 
