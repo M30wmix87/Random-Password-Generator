@@ -26,36 +26,35 @@ namespace RandomPasswordGenerator
         }
         private void Generate_btn_click(object sender, RoutedEventArgs e)
         {
-            int MaxPasswordLength;
+            int MaxPasswordLength = 8;
             string SpecialCharactersToUse;
-            string selectedValue;
             bool parseOK;
-            //get, parse and store the minimum and maximum password lengths
-            ComboBoxItem MaximumLength = (ComboBoxItem)Length_Max.SelectedItem;
-            selectedValue = MaximumLength.Content.ToString();
-            parseOK = Int32.TryParse(selectedValue, out MaxPasswordLength);
-
-            if(SpecialChar_Chkbox.IsChecked == true)
+            // try toparse and store the minimum and maximum password lengths
+            parseOK = Int32.TryParse(PWLength.Text, out MaxPasswordLength);
+   
+            if (parseOK == true)
             {
-                SpecialCharactersToUse = "*$-+?_&=!%{}/";
-                for (int i = 0; i < 100; i++)
+                if (SpecialChar_Chkbox.IsChecked == true)
                 {
-                    Results_txtbox.Text = (RandomPassword.Generate(MaxPasswordLength, SpecialCharactersToUse));
+                    SpecialCharactersToUse = "*$-+?_&=!%{}/";
+                    for (int i = 0; i < 100; i++)
+                    {
+                        Results_txtbox.Text = (RandomPassword.Generate(MaxPasswordLength, SpecialCharactersToUse));
+                    }
+                }
+                else
+                {
+                    SpecialCharactersToUse = "ABCDEFGHJKLMNPQRSTWXYZabcdefgijkmnopqrstwxyz23456789";
+                    for (int i = 0; i < 100; i++)
+                    {
+                        Results_txtbox.Text = (RandomPassword.Generate(MaxPasswordLength, SpecialCharactersToUse));
+                    }
                 }
             }
-            else
+            else //if parseOK == false
             {
-                SpecialCharactersToUse = "ABCDEFGHJKLMNPQRSTWXYZabcdefgijkmnopqrstwxyz23456789";
-                for (int i = 0; i < 100; i++)
-                {
-                    Results_txtbox.Text = (RandomPassword.Generate(MaxPasswordLength, SpecialCharactersToUse));
-                }
-            }
-
-
-
-
-            
+                Results_txtbox.Text = "Invalid Length: Please only enter numbers.";
+            }    
         }//end Generate_btn_click
     }
 }

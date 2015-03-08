@@ -7,33 +7,9 @@
         <Label Content="Instructions:" HorizontalAlignment="Left" Margin="13,17,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
         <Button Content="Generate Password" HorizontalAlignment="Left" Margin="296,104,0,0" VerticalAlignment="Top" Width="119" Click="Generate_btn_click" Height="35" />
         <TextBox Name="Results_txtbox" HorizontalAlignment="Left" Height="35" Margin="34,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="257" IsReadOnly="True" Background="#FFD8D8D8" FontSize="18" />
-        <ComboBox x:Name="Length_Max" HorizontalAlignment="Left" Margin="170,64,0,0" VerticalAlignment="Top" Width="40" IsReadOnly="True" ScrollViewer.CanContentScroll="True" >
-            <ComboBoxItem Content="8" IsSelected="True"/>
-            <ComboBoxItem Content="9" />
-            <ComboBoxItem Content="10" />
-            <ComboBoxItem Content="11" />
-            <ComboBoxItem Content="12" />
-            <ComboBoxItem Content="13" />
-            <ComboBoxItem Content="14" />
-            <ComboBoxItem Content="15" />
-            <ComboBoxItem Content="16" />
-            <ComboBoxItem Content="17" />
-            <ComboBoxItem Content="18" />
-            <ComboBoxItem Content="19" />
-            <ComboBoxItem Content="20" />
-            <ComboBoxItem Content="21" />
-            <ComboBoxItem Content="22" />
-            <ComboBoxItem Content="23" />
-            <ComboBoxItem Content="24" />
-            <ComboBoxItem Content="25" />
-            <ComboBoxItem Content="26" />
-            <ComboBoxItem Content="27" />
-            <ComboBoxItem Content="28" />
-            <ComboBoxItem Content="29" />
-            <ComboBoxItem Content="30" />
-        </ComboBox>
         <Label Content="Password Length:" HorizontalAlignment="Left" Margin="44,60,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
         <CheckBox Content="Use Special Characters?" HorizontalAlignment="Left" Margin="231,64,0,0" VerticalAlignment="Top" Name="SpecialChar_Chkbox" FontWeight="Bold" FontSize="14"/>
+        <TextBox Name="PWLength" HorizontalAlignment="Left" Height="23" Margin="170,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="32" />
 
     </Grid>
 </Window>
